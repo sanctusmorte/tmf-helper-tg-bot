@@ -61,6 +61,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        Yii::error('test', 'tmf_helper');
+        exit;
         return $this->render('index');
     }
 
