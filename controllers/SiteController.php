@@ -80,6 +80,6 @@ class SiteController extends Controller
 
         Yii::error(gettype($data), 'tmf_helper');
 
-        return 200;
+        header("HTTP/1.1 200 OK");
     }
 }
