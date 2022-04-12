@@ -80,6 +80,6 @@ class SiteController extends Controller
 
         Yii::error(gettype($data), 'tmf_helper');
 
-        return null;
+        return 200;
     }
 }
