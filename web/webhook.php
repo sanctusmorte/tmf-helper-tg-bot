@@ -9,7 +9,7 @@ $yii = (new yii\web\Application($config));
 
 try {
     $data = file_get_contents("php://input");
-    Yii::error(gettype($data), 'tmf_helper');
+    Yii::error($data, 'tmf_helper');
 } catch (Exception $e) {
     Yii::error($e->getMessage(), 'tmf_helper');
 }
