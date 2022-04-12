@@ -78,7 +78,8 @@ class SiteController extends Controller
     {
         $data = file_get_contents("php://input");
 
-        Yii::error($data, 'tmf_helper');
-        exit;
+        Yii::error(gettype($data), 'tmf_helper');
+
+        return null;
     }
 }
