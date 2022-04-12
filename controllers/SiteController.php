@@ -59,6 +59,16 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
     public function actionIndex()
     {
         return $this->render('index');
