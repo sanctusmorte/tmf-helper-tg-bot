@@ -1,7 +1,10 @@
 <?php
 
-$data = file_get_contents("php://input");
+try {
+    $data = file_get_contents("php://input");
+} catch (Exception $e) {
+    Yii::error($e->getMessage(), 'tmf_helper');
+}
+Yii::error('test2', 'tmf_helper');
 
-Yii::error(gettype($data), 'tmf_helper');
-
-header("HTTP/1.1 200 OK");
+return http_response_code(200);
